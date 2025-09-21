@@ -109,7 +109,7 @@ button {
   column-gap: 24px;
 }
 
-.gallery-item {
+.item {
   width: calc((100% - 3 * 24px) / 3);
 }
 
