@@ -25,8 +25,7 @@ const images = [
   },
 ];
 
-const gallery = document.createElement("ul");
-gallery.classList.add("gallery");
+const gallery = document.querySelector(".gallery");
 
 for (const image of images) {
   const img = document.createElement("img");

@@ -50,13 +50,13 @@ button {
 
 /* Task 1 */
 
-.list {
+#categories {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.list-item {
+.item {
   border-radius: 8px;
   padding: 16px;
   width: 392px;
@@ -64,7 +64,7 @@ button {
   background-color: #f6f6fe;
 }
 
-.list-title {
+.item h2 {
   font-family: "Montserrat", sans-serif;
 
   font-weight: 600;
@@ -77,13 +77,13 @@ button {
   margin-bottom: 16px;
 }
 
-.title-list {
+.item ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.title-list-item {
+.item ul > li {
   font-family: "Montserrat", sans-serif;
 
   font-weight: 400;
