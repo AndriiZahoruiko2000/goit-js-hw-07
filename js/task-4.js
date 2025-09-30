@@ -1,19 +1,15 @@
-const registerForm = document.querySelector(".login-form");
+const minus = document.querySelector('button[data-action="decrement"]');
+const plus = document.querySelector('button[data-action="increment"]');
+const val = document.querySelector("#value");
 
-registerForm.addEventListener("submit", handleSubmit);
+let counter = 0;
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const form = event.target;
-  const email = form.elements.email.value.trim();
-  const password = form.elements.password.value.trim();
+minus.addEventListener("click", (event) => {
+  counter -= 1;
+  minus.textContent = counter;
+});
 
-  if (email === "" || password === "") {
-    alert("All form fields must be filled in");
-    return;
-  }
-  console.log(`Email: ${email}, Password: ${password}`);
-
-  console.log({ email, password });
-  form.reset();
-}
+plus.addEventListener("click", (event) => {
+  counter += 1;
+  plus.textContent = counter;
+});

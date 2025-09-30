@@ -1,15 +1,10 @@
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
+const input = document.querySelector("#name-input");
+const output = document.querySelector("#name-output");
 
-const btn = document.querySelector("button");
-const spanColor = document.querySelector(".color");
-
-btn.addEventListener("click", (event) => {
-  const color = getRandomHexColor();
-
-  document.body.style.backgroundColor = color;
-  spanColor.textContent = color;
+input.addEventListener("input", (event) => {
+  if (event.currentTarget.value.trim() === "") {
+    output.textContent = "Anonymo";
+  } else {
+    output.textContent = event.currentTarget.value;
+  }
 });

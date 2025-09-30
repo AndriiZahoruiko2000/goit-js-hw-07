@@ -1,8 +1,28 @@
-const input = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const images = [
+  {
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
+  },
+  {
+    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+  },
+  {
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
+  },
+];
 
-input.addEventListener("input", (event) => {
-  const value = event.currentTarget.value.trim();
+const gallery = document.querySelector(".gallery");
 
-  output.textContent = value === "" ? "Anonymous" : value;
-});
+const markup = images
+  .map(
+    (image) =>
+      `<li class="list-item">
+     <img src="${image.url}" alt="${image.alt}"/>
+  </li>`
+  )
+  .join("");
+
+gallery.innerHTML = markup;
+console.log(gallery);
